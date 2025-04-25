@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  @keyframes appear{
+    from{
+      opacity: 0;
+      transform:translateX(-100px);
+    }
+    to{
+      opacity:1;
+      transform:translateX(0px);
+    }
+  }
+  
+  .faq-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* or center */
+  gap: 40px; /* spacing between image and content */
+  max-width: 2000px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* makes it responsive */
+}
+
+  .faq-item {
+    background: #ffffff; /* pastel pink */
+    border: 2px solid #4e4bea; /* soft border */
+    border-radius: 12px;
+    margin-bottom: 20px;
+    padding: 16px 20px; /* smaller padding */
+    display: flex;
+    align-items: center;
+    width: 800px;
+    height: 80px;
+    justify-content: space-between;
+    font-size: 1.2rem; /* reduced font size */
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.2s;
+    box-sizing: border-box;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  
+  .faq-item:hover {
+    border-color: #ba68c8; /* soft purple on hover */
+    transform: scale(1.01);
+  }
+  
+  .faq-question {
+    background: #ffffff; /* light lavender background */
+    padding: auto 1.2rem;
+    border-radius: 10px;
+    color: #333;
+    flex: 1;
+    text-align: left;
+  }
+
+  
+  .faq-icon {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-left: 16px;
+    user-select: none;
+    color: #7573f1; /* soft purple */
+  }
+  .faq-answer {
+    background: #ffffff;
+    padding: 1rem 1.5rem;
+    margin: -10px 0 20px 0;
+    border-left: 5px solid #ba68c8;
+    border-radius: 0 0 10px 10px;
+    font-size: 1.2rem;
+    color: #444;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    line-height: 2; 
+    max-width: 800px;
+  }
+  
+  .faq-heading {
+    font-size: 4rem;
+    color: #171f27d2;;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+  
+  
+  .faq-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+     /* light purple background */
+  }
+  
+  .faq-image img {
+    width: 100%;
+    width: 700px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+  }
+  
+  .faq-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    /* justify-content: center;
+    background-color: #ffffff; */
+  }
+  
+  
+
+  
+/* src/AboutUs.css */
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  .about {
+    position: relative;
+    overflow: hidden;
+    height: 80vh;
+  }
+
+  .about-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 100px;
+    z-index: -1;
+  
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.75), 
+        rgba(226, 238, 255, 0.769)
+      ),
+      url('../Images/about-background.jpg'); /* replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .about-container {
+      background-color: #f7e1fe00;
+      padding: 40px 30px;
+      margin: 40px auto; /* ← horizontal centering */
+      border-radius: 12px;
+      max-width: 1200px;
+      margin-top: 10%;
+      /*box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);*/
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+   
+    
+    .about-container.appear {
+      animation: fadeInSlideUp 1s ease-out forwards;
+    }
+    .about-heading {
+      font-size: 3rem;
+      color: #311d3adc;
+      margin-top: -10px;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    
+    .about-text {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .about-center {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.5rem; /* Increase this value as needed */
+    }
+      

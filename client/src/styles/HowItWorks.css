@@ -1,0 +1,200 @@
+.hiw-section {
+    display: flex;
+  flex-direction: column;
+  background: linear-gradient(#e7ecffe6, rgb(255, 255, 255));
+  min-height: 100vh;
+  padding: 40px 20px; /* Add top padding */
+  align-items: center; /* center contents horizontally */
+  justify-content: flex-start; /* align contents to top */
+  }
+  
+  .hiw-title {
+    font-size: 2.75rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-align: center;
+    letter-spacing: -1px;
+  }
+  .hiw-subtitle {
+    color: #888;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .hiw-steps-row {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 30px; /* 👈 Add spacing between rows */
+  }
+  /* Base shared styles 
+  background: #ffffff;
+    border-radius: 50% 0 50% 50%;;
+    box-shadow: 0 8px 48px rgba(80, 80, 152, 0.04);
+    flex: 1;
+    min-width: 320px;
+    max-width: 360px;
+    padding: 36px 28px 64px 28px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 32px 0;*/
+
+.hiw-step-1,
+.hiw-step-2,
+.hiw-step-3 {
+  background: #ffffff;
+  box-shadow: 0 8px 48px rgba(80, 80, 152, 0.04);
+  flex: 1;
+  min-width: 320px;
+  max-width: 360px;
+  padding: 36px 28px 64px 28px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 16px 32px 16px;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+  --bg-color: #ceb2fc83;
+  --bg-color-light: #f0e7ff;
+}
+
+/* Individual rounded shapes */
+.hiw-step-1 {
+  border-radius: 50% 0 50% 50%;
+}
+.hiw-step-2 {
+  border-radius: 50% 50% 50% 0;
+}
+.hiw-step-3 {
+  border-radius: 0 50% 50% 50%;
+}
+
+/* Hover Effects */
+/*.hiw-step-1:hover,
+.hiw-step-2:hover,
+.hiw-step-3:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+}*/
+
+.hiw-step-1:hover .overlay,
+.hiw-step-2:hover .overlay,
+.hiw-step-3:hover .overlay {
+  transform: scale(6) translateZ(0);
+}
+
+.hiw-step-1:hover .circle,
+.hiw-step-2:hover .circle,
+.hiw-step-3:hover .circle {
+  background: white;
+}
+
+
+/* Circle Styling */
+.circle {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* middle layer */
+  top: 3%;
+  left: 26%;
+}
+
+/*.circle:after {
+  content: "";
+  width: 118px;
+  height: 118px;
+  display: block;
+  position: absolute;
+  background: var(--bg-color);
+  border-radius: 50%;
+  top: 7px;
+  left: 7px;
+  transition: opacity 0.3s ease-out;
+}
+
+/* Overlay Animation Circle */
+.overlay {
+  width: 118px;
+  position: absolute;
+  height: 118px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  top: 11%;
+  left: 30%;
+  z-index: 1;
+  transition: transform 0.5s ease-out;
+}
+  .hiw-step-img {
+    width: 136px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 26px;
+    user-select: none;
+    z-index: 3;
+  }
+  .hiw-step-title {
+    position: relative;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 12px;
+    text-align: center;
+    z-index: 3;
+  }
+  .hiw-step-desc {
+    position: relative;
+    color: #444;
+    opacity: 0.9;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 0;
+    z-index: 3;
+  }
+  .hiw-step-number {
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    background: #ffd26c;
+    color: #222;
+    display: flex; /* Use flex instead of inline-block */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  max-width: 58px;
+    min-height: 50px;
+    font-weight: bold;
+    border-radius:50% 0 50% 50%;
+    font-size: 1.05rem;
+    padding: 8px 18px;
+    box-shadow: 0 2px 8px rgba(255, 210, 108, 0.4);
+    z-index: 5;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1000px) {
+    .hiw-steps-row {
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    .hiw-step {
+      margin-bottom: 36px;
+      min-width: 260px;
+      max-width: 440px;
+      width: 100%;
+    }
+  }
+
+  

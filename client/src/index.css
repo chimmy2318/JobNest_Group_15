@@ -1,0 +1,16 @@
+/* Apply font universally */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  @font-face {
+    font-family: 'Sonara BC';
+    src: url('../public/Poppins-SemiBold.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }

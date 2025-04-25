@@ -1,0 +1,418 @@
+/* Base Styles */
+.track-page{
+  padding: 20px;
+  background-color:  #e3f0f6;
+  min-height: 100vh;
+}
+.track-page .track-container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px #e2e0e0;
+  background-color: #fff;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #585656;
+}
+
+.track-page .track-head{
+  margin-top: 5%;
+   border-left: 6px solid #0003b9;
+   background: #0a66c22d;
+}
+
+.track-page .track-container h1{
+  margin-top:1%;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 20px;
+  color: #0a66c2;
+  background: linear-gradient(90deg, #2706e5, #ff0099);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.track-page .track-container p{
+  margin-left: 20px;
+  color: #5f5c5c;
+  margin-bottom: 1%;
+}
+
+.track-page .job-lis{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.track-page .add-app button{
+  background-color: #000;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Job Form Styles */
+.track-page .job-form {
+  margin: 10px 0;
+  padding: 25px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.track-page .job-form form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-end;
+}
+
+.track-page .job-form input, 
+.job-form select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  min-width: 200px;
+}
+
+.track-page .job-form input:focus, 
+.job-form select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+
+
+.track-page .job-form button:hover {
+  background: #c5cbcf;
+}
+
+/* Status Colors */
+.track-page .status-applied { color: #0003b9; background-color: #d5ebff;border-radius: 15px; padding: 6px 15px 6px 15px;}
+.track-page .status-interview { color: #887600; background-color: #f7ffd0;border-radius: 15px;padding: 6px 15px 6px 15px;}
+.track-page .status-offer { color: #164517;background-color: #b2dfc3;border-radius: 15px; padding: 6px 15px 6px 15px; }
+.track-page .status-rejected { color: #980a00; background-color: #ffcfdc;border-radius: 15px; padding: 6px 15px 6px 15px;}
+.track-page .status-rejection { color: #980a00; background-color: #ffcfdc;border-radius: 15px; padding: 6px 15px 6px 15px;}
+
+.track-page select.status-applied { color: #2196F3; }
+.track-page select.status-interview { color: #FFC107; }
+.track-page select.status-offer { color: #4CAF50; }
+.track-page select.status-rejection { color: #980a00; background-color: #ffcfdc;border-radius: 15px; padding: 6px 15px 6px 15px; }
+
+/* Table Styles */
+.track-page .filter-sort-controls{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  gap:1%;
+  width: 100%;
+  padding-left: 20px;
+
+}
+
+.track-page .filter-sort-controls .input-box {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 8px;
+  width: 35%; /* Optional: adjust the padding for better appearance */
+}
+
+.track-page .filter-sort-controls .search-input{
+  width: 100%;
+  padding-left: 10px;
+  border:none;
+}
+.track-page .filter-sort-controls .search-input:focus {
+  border: none;
+  outline: none; /* optional: removes blue highlight */
+  box-shadow: none; /* prevents any focus glow */
+}
+.track-page .filter-sort-controls select{
+  padding: 1%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 10%;
+}
+.track-page .filter-sort-controls .sort{
+  width:18%;
+}
+
+.track-page .filter-sort-controls .status-filter{
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width:20%;
+}
+.track-page .filter-sort-controls .status-filter select{
+  border:none;
+  width: 100%;
+}
+
+.track-page table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: system-ui, sans-serif;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.track-page table tr {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.track-page table tr:hover {
+  transform: scale(1); /* makes it appear closer */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* depth */
+  z-index: 1;
+  position: relative;
+}
+
+
+.track-page thead {
+  background-color: #ffffff;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.track-page thead th {
+  text-align: left;
+  font-weight: 550;
+  color: #574f75;
+  border-bottom: 1px solid #ddd;
+}
+
+.track-page .company-col {
+  font-weight: 550;
+  color: #574f75;
+
+}
+
+
+.track-page th, td {
+  padding: 1%;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.track-page .job-lis td{
+  font-size: 95%;
+  padding: 15px;
+  align-items: center;
+}
+
+/* Action Buttons */
+.track-page .edi-btn {
+  padding: 6px;
+  margin-right: 8px;
+  margin-top: -2px;
+  margin-bottom: -2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.track-page .bin-btn{
+  border: none;
+  align-items: center;
+  background-color: #fff;
+}
+
+.track-page .edit-btn {
+  background: #011929;
+  color: white;
+}
+
+.track-page .edit-btn:hover {
+  background: #7e9db2;
+}
+
+
+
+/* (All your existing styles remain exactly the same until the modal section) */
+
+/* Modal Styles - Improved with minimal changes */
+.track-page .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.track-page .edit-modal {
+  background-color: #e3f0f6;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #050541;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #000;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.track-page .edit-modal h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #000000;
+  font-size: 1.2rem; /* Slightly larger heading */
+}
+
+.track-page .form-group {
+  margin-bottom: 18px;
+
+  /* Slightly tighter spacing */
+}
+
+.track-page .form-group label {
+  display: flex;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #444; /* Darker label for better contrast */
+}
+
+.track-page .form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px; /* Slightly more horizontal padding */
+  border: 1px solid #262626;
+  border-radius: 4px;
+  font-size: 15px;
+  transition: border-color 0.2s; /* Smooth transition */
+}
+
+.track-page .form-group input:focus,
+.form-group select:focus {
+
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(23, 23, 24, 0.2);
+}
+
+.track-page .modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px; /* Slightly larger gap */
+  margin-top: 25px;
+}
+
+.track-page .modal-actions button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600; /* Bolder text */
+  transition: all 0.2s;
+}
+
+.track-page .modal-actions button[type="submit"] {
+  background: #0e0e0e;
+  color: white;
+}
+
+.track-page .modal-actions button[type="submit"]:hover {
+  background: #7e7f80;
+  transform: translateY(-1px); /* Slight lift effect */
+}
+
+.track-page .cancel-btn {
+  background: #0e0e0e;
+  color: white;
+}
+
+.track-page .cancel-btn:hover {
+  background: #7f8c8d;
+  transform: translateY(-1px);
+}
+
+
+
+.track-page .modal-overlay {
+
+  background-color: rgba(231, 231, 231, 0.4);
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+}
+
+.track-page .job-form {
+  background-color: #e3f0f6;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #050541;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #000;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.track-page .job-form h2{
+  margin-bottom: 10px;
+}
+.track-page .job-form input, .job-form select{
+  border: 1px solid #000;
+}
+
+.track-page .job-form button{
+  background-color: #000;
+  color: #fff;
+  align-self: center;
+  padding: 10px 20px;
+}
+
+.track-page .close-btn {
+  position: absolute;
+  top:1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.track-page .close-btn:hover {
+  color: #000;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .job-form form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .track-page .job-form input, 
+  .job-form select {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .track-page table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .track-page .user-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .track-page .user-info button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}

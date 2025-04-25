@@ -9,7 +9,7 @@ JobNest is a full-stack job board platform that offers a seamless experience for
 1. First, clone the repository to your local machine:
 
  ```bash
- git clone https://github.com/your-username/your-repo-name.git
+ git clone https://github.com/chimmy2318/JobNest_Group_15.git
  cd your-repo-name
 
  ```
@@ -22,6 +22,9 @@ JobNest is a full-stack job board platform that offers a seamless experience for
  ```bash
  cd server
  npm install
+ pip3 install beautifulsoup4 --break-system-packages
+ pip3 install google-api-python-client --break-system-packages
+ pip3 install google-auth-oauthlib --break-system-packages
  ```
  - Frontend (Client)
 
@@ -29,7 +32,6 @@ JobNest is a full-stack job board platform that offers a seamless experience for
  ```bash
  cd ../client
  npm install
-
  ```
 
 3. Start the Development Servers
@@ -78,11 +80,7 @@ npm start
     \c job_nest
     ```
 
-	- Run the provided SQL schema file to create all necessary tables. Make sure you have a schema.sql file that contains the full schema for the tables required by the platform. You can run the schema file using the following command:
-
-    ```bash
-    \i ./schema.sql
-    ```
+	- Run the provided SQL schema file to create all necessary tables. Make sure you have a schema.sql file that contains the full schema for the tables required by the platform. You can copy the code from schema.sql and run it in your psql terminal.
 
     This will set up all the tables for your application.
 
@@ -130,6 +128,14 @@ npm start
   LINKEDIN_API_KEY=your_rapidapi_key
   LINKEDIN_API_HOST=linkedin-job-search-api.p.rapidapi.com
   ```
+  Backend (server/controllers/token.json)
+  ```bash
+{"token": "", "refresh_token": "", "token_uri": "", "client_id": "", "client_secret": "", "scopes": ["https://www.googleapis.com/auth/gmail.readonly"], "universe_domain": "googleapis.com", "account": "", "expiry": ""}
+  ```
+Backend (server/controllers/credentials.json)
+```bash
+ {"installed":{"client_id":"","project_id":"","auth_uri":"","token_uri":"","auth_provider_x509_cert_url":"","client_secret":"","redirect_uris":["http://localhost"]}}
+```
 
   - Replace all placeholder values (your_...) with your actual credentials. You will need to configure your Google OAuth credentials for login functionality. Additionally, make sure to update the values for the Adzuna, LinkedIn, Findwork, and Remotive APIs with your respective keys and URLs.
 
